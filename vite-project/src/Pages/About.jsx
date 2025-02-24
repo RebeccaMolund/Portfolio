@@ -9,10 +9,10 @@ const About = () => {
       <Header />
       <Navbar />
       <main>
-        <div className="about-content">
+        <div className="main-content">
           <img
             className="profile-img"
-            src="./photos/Rebecca-profile.png"
+            src="../photos/Rebecca-profile.png"
             alt="Profile Image"
           />
           <h2>About me</h2>
