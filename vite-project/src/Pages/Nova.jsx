@@ -7,12 +7,9 @@ import Footer from "/src/Components/Footer";
 const Nova = () => {
     return ( 
          <>
-              <Header />
-              <Navbar />
               <div>
               <img src="../photos/Nova.png" className="Nova" alt="Nova" />
               </div>
-              <Footer />
         </>
      );
 }

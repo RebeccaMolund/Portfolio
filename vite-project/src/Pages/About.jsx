@@ -1,13 +1,8 @@
 import React from "react";
-import Header from "/src/Components/Header";
-import Navbar from "/src/Components/Navbar";
-import Footer from "/src/Components/Footer";
 
 const About = () => {
   return (
     <>
-      <Header />
-      <Navbar />
       <main>
         <div className="main-content">
           <img
@@ -33,7 +28,6 @@ const About = () => {
           </p>
         </div>
       </main>
-      <Footer />
     </>
   );
 };

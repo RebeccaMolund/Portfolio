@@ -2,6 +2,7 @@ body,
 html {
   margin: 0;
   padding: 0%;
+  font-family: Poppins;
 }
 
 .root {
@@ -24,6 +25,8 @@ html {
   background-clip: border-box;
   background-size: cover;
   background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 0.486);
+  background-blend-mode: overlay;
   align-content: space-between;
   align-items: center;
   padding-bottom: 300px;
@@ -38,8 +41,7 @@ html {
 
 .header-content {
   display: flex;
-  background-color: rgb(202, 195, 234);
-  color: rgb(91, 10, 57);
+  color: rgb(255, 255, 255);
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -56,19 +58,17 @@ html {
   display: flex;
   justify-content: space-evenly;
   padding-right: 1px;
-  background-color: rgba(202, 195, 234, 0.437);
   width: 100%;
 }
 
 a {
-  font-family: "Lucida Sans";
   font-size: small;
-  color: rgb(85, 36, 85);
-  font-family: "Lucida Sans";
+  color: rgb(82, 10, 82);
   font-size: large;
   font-weight: 600;
   text-decoration: none;
   padding: 1rem;
+  transition: ease 0.5s;
 }
 
 a:hover {
@@ -85,16 +85,17 @@ main {
 }
 
 .main-content {
-  background-color: rgba(255, 255, 255, 0.503);
+  /* background-color: rgba(255, 255, 255, 0.503); */
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
   margin: 1rem 1rem 0 1rem;
-  border-radius: 5px;
+  /*   border-radius: 5px; */
   justify-content: center;
   justify-self: center;
-  border: 1px solid white;
-  box-shadow: inset 0 0 14px #ffffff;
+  /*   border: 1px solid white; */
+  /*  box-shadow: inset 0 0 14px #ffffff; */
+  gap: 1rem;
 }
 
 .card-section,
@@ -105,30 +106,25 @@ main {
   margin: 0%;
   padding: 1rem;
   text-align: center;
-  font-family: "Lucida Sans";
 }
 
 .img-container {
   display: flex;
   flex-direction: column;
   padding: 0%;
-  margin: 2rem 0 0.5rem;
+  margin: 0 0 0.5rem 0;
   text-align: center;
   align-items: center;
-  width: 100%;
-  max-width: 18rem;
-  height: 18rem;
+  max-width: 12rem;
+  height: 12rem;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 1px 1px 6px 0px grey;
+  transition: ease-in-out 0.5s;
 }
 
 .img-container:hover {
   transform: scale(1.1);
-}
-
-img:hover {
-  opacity: 0.7;
 }
 
 .img-project {
@@ -138,16 +134,19 @@ img:hover {
   justify-content: center;
   margin: 0%;
   padding: 0%;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
+.emovereFront {
+  max-width: 400px;
+}
 /* Headings and fonts */
 
 h1 {
-  color: rgb(245, 238, 243);
-  font-size: xxx-large;
-  text-shadow: 2px 2px 4px rgba(92, 49, 101, 0.445);
-  font-family: myFirstFont;
+  color: rgb(29, 1, 25);
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: "Fascinate Inline", serif;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -161,10 +160,11 @@ h2 {
 }
 h4,
 p {
-  color: rgb(136, 110, 136);
-  font-family: "Lucida Sans";
+  color: rgb(152, 100, 152);
+  font-weight: 300;
   margin: 0;
   padding: 0;
+  max-width: 200px;
 }
 
 /* Footer */
@@ -205,25 +205,36 @@ footer {
     max-width: 1200px;
   }
 
-  .card-section {
-    margin: 0 1rem;
-  }
   .navbar {
-    background-color: rgba(202, 195, 234, 0.437);
     justify-content: center;
   }
   .main {
     padding: 1rem;
   }
-}
 
-@media (min-width: 1024px) {
-  header {
+  .header-content {
+    display: flex;
     width: 100%;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: space-around;
+  }
+
+  h1 {
+    font-size: 1.5rem;
   }
   .main-content {
     width: 100%;
     height: 100%;
     padding-bottom: 0;
+    gap: 1rem;
+  }
+  .navbar {
+    display: flex;
+    justify-content: end;
+    padding-right: 2rem;
+    width: 100%;
+    padding-left: 1rem;
+    max-width: 250px;
   }
 }
