@@ -1,20 +1,18 @@
 import Navbar from "./Navbar";
+import "../Stylesheets/header.css";
+import ProfilePicture from "./ProfilePicture";
 
 const Header = () => {
   return (
     <header>
       <Navbar />
       <div className="headerContent">
-        <h1>Creative,</h1>
-        <h1 className="gradientTitle">Accessible,</h1>
-        <h1>& Playful UX</h1>
-        <div className="profilePhotoContainer">
-          <img
-            className="profile-img"
-            src="../photos/Rebecca-profile.png"
-            alt="Profile Image"
-          />
+        <div className="headerText">
+          <h1>Creative,</h1>
+          <h1 className="gradientTitle">Accessible,</h1>
+          <h1>& Playful UX</h1>
         </div>
+        <ProfilePicture />
       </div>
     </header>
   );

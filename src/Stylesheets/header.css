@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  background-color: #1e0044;
+  border-radius: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column-reverse;
+  width: 100%;
+  color: #e9deff;
+}
+
+.gradientTitle {
+  background: -webkit-linear-gradient(left, #a866ff, #cc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}

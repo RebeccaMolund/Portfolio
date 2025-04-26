@@ -1,0 +1,10 @@
+.profilePhotoContainer {
+  padding: 0;
+}
+
+.profilePhoto {
+  max-width: 5rem;
+  max-height: 5rem;
+  border-radius: 200px;
+  object-fit: cover;
+}
