@@ -1,14 +1,4 @@
-/* .navbar {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 10px;
-  background-color: #1e0044;
-  border-radius: 40px 40px 0px 0px;
-  max-width: 1400px;
-}
 
- */
 
 .navbar {
   display: flex;
@@ -23,19 +13,29 @@
 }
 
 .nav-links {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  right: 1rem;
-  background: #000000cc;
-  padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
   width: 20rem;
+  background: #000000a8;
+  padding: 2rem 3rem;
+  flex-direction: column;
+  transform: translateX(100%); /* off-screen */
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  pointer-events: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .nav-links.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
   display: flex;
-  width: 200px;
-  height: 100%;
 }
 
 .nav-links a {
@@ -49,8 +49,10 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 5px;
-  padding: 10px 40px 0px 0px;
+  width: 50px;
+  padding: 10px 0px 0px 0px;
 }
 
 .bar {
@@ -60,7 +62,13 @@
 }
 
 .closeButton {
-  width: 25px;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  background: none;
+  border: none;
+  color: aliceblue;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* ---- Större skärmar ---- */
@@ -75,10 +83,14 @@
 
   .nav-links {
     display: flex !important;
-    flex-direction: row;
+    flex-direction:row;
+    justify-content: center;
     position: static;
     gap: 2rem;
     background: none;
     padding: 0;
+    transform: none !important; /* Add this */
+    opacity: 1 !important;      /* And this */
+    pointer-events: auto !important;
   }
 }

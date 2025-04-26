@@ -1,22 +1,6 @@
-html {
-  background-color: #0b001a;
-  padding: 10px;
-}
-
-#root {
-  width: 100%;
-}
-
-.app {
-  max-width: 1400px;
-}
-
-body {
+/* body {
   display: flex;
-  background-color: rgba(255, 255, 255, 0);
-  border-radius: 40px;
   padding: 0px;
-  max-width: 1400px;
-  height: 100;
+  width: 100%;
   justify-content: center;
-}
+} */
