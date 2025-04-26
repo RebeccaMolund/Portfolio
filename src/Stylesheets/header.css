@@ -12,7 +12,6 @@ header {
   justify-content: space-around;
   flex-direction: column-reverse;
   width: 100%;
-  color: #e9deff;
 }
 
 .gradientTitle {
@@ -20,4 +19,8 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: italic;
+}
+
+.headerText {
+  font-weight: 900;
 }

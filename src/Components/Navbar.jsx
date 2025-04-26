@@ -7,6 +7,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
+        <button className="closeButton" onClick={() => setIsOpen(false)}>
+          ✖
+        </button>
         <Link className="HBlistItem" to="/">
           Home
         </Link>

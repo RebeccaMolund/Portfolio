@@ -16,8 +16,6 @@
   padding: 1rem 2rem 1rem 2rem;
   color: white;
   width: 100%;
-  /*   margin-left: 40px;
-  margin-right: 40px; */
 }
 
 .logo {
@@ -28,7 +26,6 @@
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 60px;
   right: 1rem;
   background: #000000cc;
   padding: 1rem;
@@ -37,12 +34,15 @@
 
 .nav-links.open {
   display: flex;
+  width: 200px;
+  height: 100%;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   margin: 0.5rem 0;
+  text-align: end;
 }
 
 .hamburger {
@@ -59,9 +59,17 @@
   background-color: white;
 }
 
+.closeButton {
+  width: 25px;
+}
+
 /* ---- Större skärmar ---- */
 @media (min-width: 768px) {
   .hamburger {
+    display: none;
+  }
+
+  .closeButton {
     display: none;
   }
 
