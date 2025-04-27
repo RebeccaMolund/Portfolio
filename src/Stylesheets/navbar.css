@@ -2,7 +2,7 @@
 
 .navbar {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   padding: 1rem 2rem 1rem 2rem;
   color: white;
   width: 100%;
@@ -13,6 +13,8 @@
 }
 
 .nav-links {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   right: 0;
@@ -20,10 +22,10 @@
   width: 20rem;
   background: #000000a8;
   padding: 2rem 3rem;
-  flex-direction: column;
-  transform: translateX(100%); /* off-screen */
-  opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0; /* <-- Start hidden */
+  visibility: hidden; /* <-- Start hidden */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s;
   pointer-events: none;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10.3px);
@@ -34,8 +36,8 @@
 .nav-links.open {
   transform: translateX(0);
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
-  display: flex;
 }
 
 .nav-links a {
@@ -73,6 +75,17 @@
 
 /* ---- Större skärmar ---- */
 @media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around
+   /*  align-items: flex-start;
+ /*    flex: 1 0 0; */
+  } */
+
+
+  .bar {
+    display: none;
+  }  
   .hamburger {
     display: none;
   }
@@ -83,14 +96,31 @@
 
   .nav-links {
     display: flex !important;
-    flex-direction:row;
+    flex-direction:row-reverse;
     justify-content: center;
     position: static;
     gap: 2rem;
     background: none;
     padding: 0;
-    transform: none !important; /* Add this */
     opacity: 1 !important;      /* And this */
     pointer-events: auto !important;
+    border: none;
+    box-shadow: none;
+    visibility:visible;
   }
-}
+  .HBlistItem {
+    display: flex;
+    padding: 8px 14px;
+    align-items: center;
+    width: 150px;
+    gap: 10px;
+    border-radius: 19.169px;
+    border: 1px solid #a172ff;
+    background: #1E0044;
+    box-shadow: 0px 0px 19px 9px rgba(162, 45, 247, 0.10), 0px 0px 46.852px 0px rgba(162, 45, 247, 0.10), 0px 0px 25.481px 0px rgba(162, 45, 247, 0.10), 0px 0px 13px 0px rgba(162, 45, 247, 0.10), 0px 0px 6.519px 0px rgba(162, 45, 247, 0.10), 0px 0px 3.148px 0px rgba(162, 45, 247, 0.10);
+    }
+    .navSocials {
+      display:flex;
+      flex-direction: row;
+    }
+  }

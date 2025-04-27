@@ -1,26 +1,31 @@
 import { Link } from "react-router-dom";
 import "../Stylesheets/navbar.css";
-import { useState } from "react";
+import HBmenu from "./HBmenu";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar">
-      <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        <button className="closeButton" onClick={() => setIsOpen(false)}>
-          ✖
-        </button>
-        <Link className="HBlistItem" to="/">
-          Home
-        </Link>
-        <Link to="/Pages/About">About Me</Link>
-      </div>
+      <img src="/Frame 10.png" alt="" />
+      <HBmenu />
+        <div className="navSocials">
+          
+          <div className="linkContainer">
+          <img src="IconLinkedIn.png" alt="LinkedIn" />
+          <a href="">LinkedIn</a></div>
 
-      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
+          <div className="linkContainer">
+          <img src="IconLinkedIn.png" alt="LinkedIn" />
+          <a href="">Github</a></div>
+
+          <div className="linkContainer">
+          <img src="IconLinkedIn.png" alt="LinkedIn" />
+          <a href="">Instagram</a></div>
+
+          <div className="linkContainer">
+          <img src="IconLinkedIn.png" alt="LinkedIn" />
+          <a href="rebecca.labeeb@gmail.com" type="email">Email</a></div>
+        </div>
     </nav>
   );
 };
