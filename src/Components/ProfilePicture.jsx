@@ -5,7 +5,7 @@ const ProfilePicture = () => {
     <div className="profilePhotoContainer">
       <img
         className="profilePhoto"
-        src="../public/Rebecca-profile.png"
+        src="../Rebecca-profile.png"
         alt=""
       />
     </div>

@@ -1,0 +1,12 @@
+.roleCard {
+    display: flex;
+height: 345px;
+padding: 36px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+flex-shrink: 0;
+align-self: stretch;
+border-radius: 20px;
+border: 1px solid var(--Style, #8338EC);
+}

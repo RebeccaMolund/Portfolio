@@ -9,9 +9,11 @@ header {
 
 .headerContent {
   display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   align-items: center;
   justify-content: space-around;
-  flex-direction: column-reverse;
+  flex-direction: row;
   width: 100%;
 }
 
@@ -20,9 +22,9 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: italic;
-  font-size: 2.5rem;
 }
 
 .headerText {
   font-weight: 900;
+  font-size: 0.5rem;
 }

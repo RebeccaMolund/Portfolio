@@ -1,10 +1,10 @@
 import React from "react";
-import MainContent from "../Components/MainContent";
+import MainContentHome from "../Components/MainContentHome";
 
 const Home = () => {
   return (
     <>
-      <MainContent />
+      <MainContentHome />
     </>
   );
 };
